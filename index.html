@@ -1,64 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rassemblement Alsacien</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rassemblement Alsacien</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
         <h1>Rassemblement Alsacien</h1>
-        <p>Pour une Alsace libre et indépendante</p>
-        <a href="#programme" class="cta-button">Découvrez notre programme</a>
-    </header>
-
-    <nav>
         <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#programme">Programme</a></li>
-            <li><a href="#histoire">Histoire</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#idees">Nos Idées</a></li>
+          <li><a href="#valeurs">Nos Valeurs</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <h2>Rejoignez le mouvement pour l'indépendance alsacienne</h2>
-        <p>Une région riche de son histoire mérite son avenir</p>
-        <a href="#contact" class="cta-button">Participez !</a>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+      <h2>Pour une Alsace libre et fière</h2>
+      <p>Découvrez nos idées pour l'indépendance et le renouveau de l'Alsace</p>
+      <button class="btn" onclick="scrollToSection('idees')">En savoir plus</button>
+    </div>
+  </section>
 
-    <section class="tabs-section" id="programme">
-        <div class="tabs">
-            <button class="tab-button active" data-tab="vision">Notre Vision</button>
-            <button class="tab-button" data-tab="valeurs">Nos Valeurs</button>
-            <button class="tab-button" data-tab="action">Notre Action</button>
+  <!-- Nos Idées -->
+  <section id="idees">
+    <div class="container">
+      <h2 class="section-title">Nos Idées</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Souveraineté régionale</h3>
+          <p>Nous souhaitons redonner à l'Alsace la maîtrise de son destin et de ses institutions.</p>
         </div>
-        <div class="tab-content">
-            <div id="vision" class="tab-pane active">
-                <h3>Notre Vision</h3>
-                <p>L'Alsace doit retrouver sa souveraineté pour préserver sa culture unique et son identité forte.</p>
-            </div>
-            <div id="valeurs" class="tab-pane">
-                <h3>Nos Valeurs</h3>
-                <p>Tradition, liberté, fierté régionale et solidarité entre Alsaciens.</p>
-            </div>
-            <div id="action" class="tab-pane">
-                <h3>Notre Action</h3>
-                <p>Mobilisation citoyenne et défense des intérêts alsaciens face à la centralisation.</p>
-            </div>
+        <div class="card">
+          <h3>Identité culturelle</h3>
+          <p>Valoriser et protéger notre patrimoine et nos traditions alsaciennes uniques.</p>
         </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Rassemblement Alsacien - Tous droits réservés</p>
-        <p>Contact : contact@rassemblement-alsacien.fr</p>
-        <div class="social-links">
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        <div class="card">
+          <h3>Développement économique</h3>
+          <p>Encourager une économie locale forte et indépendante des influences extérieures.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Nos Valeurs -->
+  <section id="valeurs" class="section-light">
+    <div class="container">
+      <h2 class="section-title">Nos Valeurs</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Liberté</h3>
+          <p>Pour que chaque Alsacien puisse s'épanouir en toute autonomie.</p>
+        </div>
+        <div class="card">
+          <h3>Fierté</h3>
+          <p>Honorer l'histoire et les traditions de notre belle région.</p>
+        </div>
+        <div class="card">
+          <h3>Solidarité</h3>
+          <p>Unissons-nous pour construire une Alsace forte et solidaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contactez-nous</h2>
+      <div class="contact-form">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Votre nom" required>
+          <input type="email" id="email" placeholder="Votre email" required>
+          <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Rassemblement Alsacien. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
