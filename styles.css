@@ -8,16 +8,17 @@
 body {
     background: url('https://images.unsplash.com/photo-1591017683196-3ba8988b6e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center fixed;
     background-size: cover;
-    color: #333;
+    color: #2E2E2E;
     line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(45deg, #8B0000, #FFFFFF);
+    background: linear-gradient(45deg, #A6192E, #FFFFFF);
     padding: 3rem 2rem;
     text-align: center;
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: fadeInDown 1s ease-in-out;
 }
 
 header h1 {
@@ -35,8 +36,8 @@ header p {
     display: inline-block;
     margin-top: 1.5rem;
     padding: 0.8rem 2rem;
-    background: #FFD700;
-    color: #333;
+    background: #FFC107;
+    color: #2E2E2E;
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
@@ -44,12 +45,12 @@ header p {
 }
 
 .cta-button:hover {
-    background: #FFC107;
+    background: #FFB300;
     transform: scale(1.05);
 }
 
 nav {
-    background: rgba(51, 51, 51, 0.9);
+    background: rgba(166, 25, 46, 0.9);
     padding: 1.5rem;
     position: sticky;
     top: 0;
@@ -74,7 +75,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #FFD700;
+    color: #FFC107;
 }
 
 .hero {
@@ -85,6 +86,7 @@ nav a:hover {
     color: white;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
     position: relative;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero::before {
@@ -112,50 +114,103 @@ nav a:hover {
     font-size: 1.3rem;
 }
 
-.content {
+.tabs-section {
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
 }
 
-.card {
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 1rem 2rem;
+    background: #FFFFFF;
+    border: 2px solid #A6192E;
+    color: #A6192E;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.tab-button:hover {
+    background: #A6192E;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.tab-button.active {
+    background: #A6192E;
+    color: white;
+}
+
+.tab-content {
     background: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.tab-pane {
+    display: none;
 }
 
-.card h3 {
-    color: #8B0000;
+.tab-pane.active {
+    display: block;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.tab-pane h3 {
+    color: #A6192E;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
 footer {
-    background: rgba(51, 51, 51, 0.9);
+    background: rgba(166, 25, 46, 0.9);
     color: white;
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
     backdrop-filter: blur(5px);
+    animation: fadeInUp 1s ease-in-out;
 }
 
 footer .social-links a {
-    color: #FFD700;
+    color: #FFC107;
     text-decoration: none;
     margin: 0 0.5rem;
+    transition: color 0.3s;
 }
 
 footer .social-links a:hover {
-    text-decoration: underline;
+    color: #FFB300;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @media (max-width: 768px) {
@@ -171,5 +226,10 @@ footer .social-links a:hover {
 
     .hero p {
         font-size: 1rem;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
