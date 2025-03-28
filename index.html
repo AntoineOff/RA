@@ -24,7 +24,7 @@
     </div>
   </header>
 
-  <!-- Hero (Image d'accueil) -->
+  <!-- Hero -->
   <section class="hero" id="accueil">
     <div class="hero-content">
       <h2>Pour une Alsace libre et fière</h2>
@@ -33,27 +33,28 @@
     </div>
   </section>
 
-  <!-- Contenu des onglets -->
+  <!-- Onglets -->
   <div class="tabs-container">
     <button class="tab-btn active" onclick="showTab('idees')">Nos Idées</button>
     <button class="tab-btn" onclick="showTab('valeurs')">Nos Valeurs</button>
   </div>
 
+  <!-- Contenu des onglets -->
   <section id="idees" class="tab-content active">
     <div class="container">
       <h2 class="section-title">Nos Idées</h2>
       <div class="card-container">
-        <div class="card">
+        <div class="card animate">
           <img src="images/souverainete.jpg" alt="Souveraineté">
           <h3>Souveraineté régionale</h3>
           <p>Redonner à l'Alsace la maîtrise de son destin.</p>
         </div>
-        <div class="card">
+        <div class="card animate">
           <img src="images/culture.jpg" alt="Culture">
           <h3>Identité culturelle</h3>
           <p>Préserver et promouvoir nos traditions alsaciennes.</p>
         </div>
-        <div class="card">
+        <div class="card animate">
           <img src="images/economie.jpg" alt="Économie">
           <h3>Économie locale</h3>
           <p>Encourager une économie forte et indépendante.</p>
@@ -66,17 +67,17 @@
     <div class="container">
       <h2 class="section-title">Nos Valeurs</h2>
       <div class="card-container">
-        <div class="card">
+        <div class="card animate">
           <img src="images/liberte.jpg" alt="Liberté">
           <h3>Liberté</h3>
           <p>Donner aux Alsaciens plus d'autonomie.</p>
         </div>
-        <div class="card">
+        <div class="card animate">
           <img src="images/fierte.jpg" alt="Fierté">
           <h3>Fierté</h3>
           <p>Valoriser notre histoire et nos traditions.</p>
         </div>
-        <div class="card">
+        <div class="card animate">
           <img src="images/solidarite.jpg" alt="Solidarité">
           <h3>Solidarité</h3>
           <p>Construire une région forte et unie.</p>
@@ -93,7 +94,7 @@
         <input type="text" placeholder="Votre nom" required>
         <input type="email" placeholder="Votre email" required>
         <textarea placeholder="Votre message" required></textarea>
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="btn">Envoyer</button>
       </form>
     </div>
   </section>
