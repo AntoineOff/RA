@@ -1,121 +1,84 @@
 /* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Arial', sans-serif; background: #f8f8f8; color: #333; }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Header */
+/* Barre de navigation */
 header {
   background: #1f3c88;
-  color: #fff;
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
-
-/* Sections */
-section {
-  padding: 60px 0;
-}
-
-.section-title {
+  padding: 15px 0;
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2em;
-  color: #1f3c88;
+  color: white;
 }
+nav ul { list-style: none; }
+nav ul li { display: inline; margin: 0 15px; }
+nav ul li a { color: white; text-decoration: none; }
 
-.section-light {
-  background: #e9ecef;
+/* Hero */
+.hero {
+  background: url('images/alsace.jpg') no-repeat center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
 }
+.hero::after { background: rgba(0,0,0,0.5); }
 
-/* Cartes */
+/* Boutons */
+.btn {
+  background: #ffcc00;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover { background: #e6b800; }
+
+/* Onglets */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.tab-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #ddd;
+  border: none;
+  margin: 5px;
+  transition: 0.3s;
+}
+.tab-btn.active, .tab-btn:hover { background: #1f3c88; color: white; }
+
+/* Contenu des sections */
+.tab-content { display: none; padding: 40px 20px; }
+.tab-content.active { display: block; }
+
 .card-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
-
 .card {
-  background: #fff;
   width: 300px;
+  background: white;
   margin: 15px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Contact */
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
+  padding: 15px;
+  text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
-.contact-form input,
-.contact-form textarea {
+.card img {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 /* Footer */
 footer {
   background: #333;
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
 }
