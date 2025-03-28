@@ -1,235 +1,121 @@
+/* Reset & Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: url('https://cdn-s-www.lalsace.fr/images/D1C19F23-7AFB-4C93-B329-9651B0564A6C/NW_raw/l-affiche-2020-de-l-alsace-fan-day-troisieme-edition-dr-1592837432.jpg') no-repeat center fixed;
-    background-size: cover;
-    color: #2E2E2E;
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
 }
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
 header {
-    background: linear-gradient(45deg, #A6192E, #FFFFFF);
-    padding: 3rem 2rem;
-    text-align: center;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    animation: fadeInDown 1s ease-in-out;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.2rem;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.8rem 2rem;
-    background: #FFC107;
-    color: #2E2E2E;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: transform 0.3s, background 0.3s;
-}
-
-.cta-button:hover {
-    background: #FFB300;
-    transform: scale(1.05);
+  background: #1f3c88;
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 nav {
-    background: rgba(166, 25, 46, 0.9);
-    padding: 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+  list-style: none;
+  display: flex;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
+nav ul li {
+  margin-left: 20px;
 }
 
-nav a:hover {
-    color: #FFC107;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
 }
 
-.hero {
-    padding: 5rem 2rem;
-    text-align: center;
-    background: url('https://source.unsplash.com/random/1600x900?alsace') no-repeat center;
-    background-size: cover;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-    position: relative;
-    animation: fadeIn 1.5s ease-in-out;
+nav ul li a:hover {
+  color: #ffcc00;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    z-index: 1;
+/* Sections */
+section {
+  padding: 60px 0;
 }
 
-.hero h2, .hero p, .hero .cta-button {
-    position: relative;
-    z-index: 2;
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #1f3c88;
 }
 
-.hero h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
+.section-light {
+  background: #e9ecef;
 }
 
-.hero p {
-    font-size: 1.3rem;
+/* Cartes */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.tabs-section {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 2rem;
+.card {
+  background: #fff;
+  width: 300px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.tab-button {
-    padding: 1rem 2rem;
-    background: #FFFFFF;
-    border: 2px solid #A6192E;
-    color: #A6192E;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background 0.3s, color 0.3s, transform 0.3s;
+/* Contact */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.tab-button:hover {
-    background: #A6192E;
-    color: white;
-    transform: translateY(-3px);
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.tab-button.active {
-    background: #A6192E;
-    color: white;
-}
-
-.tab-content {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
-.tab-pane {
-    display: none;
-}
-
-.tab-pane.active {
-    display: block;
-    animation: slideIn 0.5s ease-in-out;
-}
-
-.tab-pane h3 {
-    color: #A6192E;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
+/* Footer */
 footer {
-    background: rgba(166, 25, 46, 0.9);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    backdrop-filter: blur(5px);
-    animation: fadeInUp 1s ease-in-out;
-}
-
-footer .social-links a {
-    color: #FFC107;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #FFB300;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .tabs {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
