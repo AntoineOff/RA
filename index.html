@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rassemblement Alsacien</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Barre de navigation -->
   <header>
     <div class="container">
       <nav>
@@ -23,7 +24,7 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero (Image d'accueil) -->
   <section class="hero" id="accueil">
     <div class="hero-content">
       <h2>Pour une Alsace libre et fière</h2>
@@ -32,43 +33,53 @@
     </div>
   </section>
 
-  <!-- Nos Idées -->
-  <section id="idees">
+  <!-- Contenu des onglets -->
+  <div class="tabs-container">
+    <button class="tab-btn active" onclick="showTab('idees')">Nos Idées</button>
+    <button class="tab-btn" onclick="showTab('valeurs')">Nos Valeurs</button>
+  </div>
+
+  <section id="idees" class="tab-content active">
     <div class="container">
       <h2 class="section-title">Nos Idées</h2>
       <div class="card-container">
         <div class="card">
+          <img src="images/souverainete.jpg" alt="Souveraineté">
           <h3>Souveraineté régionale</h3>
-          <p>Nous souhaitons redonner à l'Alsace la maîtrise de son destin et de ses institutions.</p>
+          <p>Redonner à l'Alsace la maîtrise de son destin.</p>
         </div>
         <div class="card">
+          <img src="images/culture.jpg" alt="Culture">
           <h3>Identité culturelle</h3>
-          <p>Valoriser et protéger notre patrimoine et nos traditions alsaciennes uniques.</p>
+          <p>Préserver et promouvoir nos traditions alsaciennes.</p>
         </div>
         <div class="card">
-          <h3>Développement économique</h3>
-          <p>Encourager une économie locale forte et indépendante des influences extérieures.</p>
+          <img src="images/economie.jpg" alt="Économie">
+          <h3>Économie locale</h3>
+          <p>Encourager une économie forte et indépendante.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Nos Valeurs -->
-  <section id="valeurs" class="section-light">
+  <section id="valeurs" class="tab-content">
     <div class="container">
       <h2 class="section-title">Nos Valeurs</h2>
       <div class="card-container">
         <div class="card">
+          <img src="images/liberte.jpg" alt="Liberté">
           <h3>Liberté</h3>
-          <p>Pour que chaque Alsacien puisse s'épanouir en toute autonomie.</p>
+          <p>Donner aux Alsaciens plus d'autonomie.</p>
         </div>
         <div class="card">
+          <img src="images/fierte.jpg" alt="Fierté">
           <h3>Fierté</h3>
-          <p>Honorer l'histoire et les traditions de notre belle région.</p>
+          <p>Valoriser notre histoire et nos traditions.</p>
         </div>
         <div class="card">
+          <img src="images/solidarite.jpg" alt="Solidarité">
           <h3>Solidarité</h3>
-          <p>Unissons-nous pour construire une Alsace forte et solidaire.</p>
+          <p>Construire une région forte et unie.</p>
         </div>
       </div>
     </div>
@@ -78,24 +89,19 @@
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contactez-nous</h2>
-      <div class="contact-form">
-        <form id="contactForm">
-          <input type="text" id="name" placeholder="Votre nom" required>
-          <input type="email" id="email" placeholder="Votre email" required>
-          <textarea id="message" rows="5" placeholder="Votre message" required></textarea>
-          <button type="submit">Envoyer</button>
-        </form>
-      </div>
+      <form id="contactForm">
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Rassemblement Alsacien. Tous droits réservés.</p>
-    </div>
+    <p>&copy; 2025 Rassemblement Alsacien. Tous droits réservés.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
