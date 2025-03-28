@@ -1,5 +1,5 @@
-/* Reset & Bases */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 body { font-family: 'Arial', sans-serif; background: #f8f8f8; color: #333; }
 
 /* Barre de navigation */
@@ -8,6 +8,7 @@ header {
   padding: 15px 0;
   text-align: center;
   color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 nav ul { list-style: none; }
 nav ul li { display: inline; margin: 0 15px; }
@@ -22,44 +23,23 @@ nav ul li a { color: white; text-decoration: none; }
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 20px;
 }
-.hero::after { background: rgba(0,0,0,0.5); }
+.hero h2 { font-size: 2.5em; animation: fadeIn 1.5s ease-in-out; }
 
 /* Boutons */
 .btn {
   background: #ffcc00;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
-.btn:hover { background: #e6b800; }
+.btn:hover { background: #e6b800; transform: scale(1.05); }
 
-/* Onglets */
-.tabs-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.tab-btn {
-  padding: 10px 20px;
-  cursor: pointer;
-  background: #ddd;
-  border: none;
-  margin: 5px;
-  transition: 0.3s;
-}
-.tab-btn.active, .tab-btn:hover { background: #1f3c88; color: white; }
-
-/* Contenu des sections */
-.tab-content { display: none; padding: 40px 20px; }
-.tab-content.active { display: block; }
-
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/* Animations des cartes */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 .card {
   width: 300px;
@@ -69,16 +49,5 @@ nav ul li a { color: white; text-decoration: none; }
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-.card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  animation: fadeInUp 1s ease-in-out;
 }
