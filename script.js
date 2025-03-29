@@ -28,29 +28,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-// YouTube Player API
-let player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-player', {
-        height: '100%',
-        width: '100%',
-        videoId: 'YOUR_VIDEO_ID', // Remplacez par l'ID de votre vidéo YouTube (ex. "dQw4w9WgXcQ")
-        playerVars: {
-            'autoplay': 1,         // Lecture automatique
-            'controls': 0,         // Masquer les contrôles
-            'loop': 1,             // Boucle
-            'mute': 1,             // Muet
-            'showinfo': 0,         // Masquer les infos
-            'rel': 0,              // Ne pas montrer les vidéos suggérées
-            'playlist': '5z1WheaSVkcD' // Nécessaire pour la boucle
-        },
-        events: {
-            'onReady': onPlayerReady
-        }
-    });
-}
-
-function onPlayerReady(event) {
-    event.target.playVideo(); // Démarre la vidéo dès qu'elle est prête
-}
