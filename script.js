@@ -1,27 +1,30 @@
-// Fonction pour défiler en douceur
-function scrollToSection(id) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-
-// Gestion des onglets
-function showTab(tabId) {
-  document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-
-  document.getElementById(tabId).classList.add('active');
-  document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
-}
-
-// Animation au scroll
-document.addEventListener('scroll', function() {
-  document.querySelectorAll('.card').forEach(card => {
-    if (card.getBoundingClientRect().top < window.innerHeight - 50) {
-      card.classList.add('visible');
-    }
-  });
-});
-
-// Activation par défaut
+// Animation supplémentaire pour le bouton CTA
 document.addEventListener('DOMContentLoaded', () => {
-  showTab('idees');
+    const ctaButton = document.querySelector('.cta');
+
+    // Effet de pulsation au chargement
+    ctaButton.addEventListener('mouseenter', () => {
+        ctaButton.style.animation = 'pulse 0.5s infinite';
+    });
+
+    ctaButton.addEventListener('mouseleave', () => {
+        ctaButton.style.animation = 'none';
+    });
+
+    // Redirection fictive au clic (à personnaliser)
+    ctaButton.addEventListener('click', () => {
+        alert('Bienvenue dans le mouvement ! Inscris-toi pour nous rejoindre.');
+        // window.location.href = '/inscription'; // À décommenter et adapter
+    });
 });
+
+// Définition de l'animation de pulsation
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+`;
+document.head.appendChild(styleSheet);
