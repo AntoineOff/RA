@@ -70,7 +70,7 @@ body {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background: url('assets/hero-image.jpg') no-repeat center center/cover; /* Image de fond */
+    background: url('https://raw.githubusercontent.com/AntoineOff/VibraLab/refs/heads/main/images/66e9559b45b19b20840231d0_Visiter%20Alsace%20blog%20Voyage.jpg') no-repeat center center/cover; /* Image de fond */
 }
 
 .hero-overlay {
