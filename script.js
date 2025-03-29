@@ -19,12 +19,10 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
     observer.observe(el);
 });
 
-// Smooth scroll pour les liens
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Marquer l'onglet actif
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+    }
 });
