@@ -25,10 +25,7 @@
     </header>
 
     <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="Strasbourg-cinematicvideo(1).mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la vidéo.
-        </video>
+        <div id="youtube-player" class="hero-video"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="animate-title">Pour une Alsace Libre et Forte</h1>
@@ -37,6 +34,8 @@
         </div>
     </section>
 
+    <!-- Charger l'API YouTube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
 </body>
 </html>
