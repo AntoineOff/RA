@@ -2,30 +2,46 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    copyrights<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme - Rassemblement Alsacien</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!-- Même navigation que index.html -->
+        <nav class="navbar">
+            <div class="logo">Rassemblement Alsacien</div>
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="communaute.html">Communauté</a></li>
+                <li><a href="multimedia.html">Multimédia</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="programme">
-        <h2>Nos Valeurs</h2>
+        <h2 class="animate-on-scroll">Nos Valeurs</h2>
         <div class="cards">
-            <div class="card" data-info="Autonomie pour l'Alsace">
-                <h3>Indépendance</h3>
+            <div class="card animate-on-scroll">
+                <h3>Autonomie</h3>
+                <p>Une Alsace souveraine et indépendante.</p>
             </div>
-            <div class="card" data-info="Préserver notre culture">
+            <div class="card animate-on-scroll">
                 <h3>Tradition</h3>
+                <p>Préserver notre héritage culturel.</p>
             </div>
-            <div class="card" data-info="Sécurité et ordre">
-                <h3>Fermeté</h3>
+            <div class="card animate-on-scroll">
+                <h3>Jeunesse</h3>
+                <p>Donner une voix à la nouvelle génération.</p>
             </div>
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
