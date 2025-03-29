@@ -43,7 +43,7 @@ function onYouTubeIframeAPIReady() {
             'mute': 1,             // Muet
             'showinfo': 0,         // Masquer les infos
             'rel': 0,              // Ne pas montrer les vidéos suggérées
-            'playlist': 'YOUR_VIDEO_ID' // Nécessaire pour la boucle
+            'playlist': '5z1WheaSVkcD' // Nécessaire pour la boucle
         },
         events: {
             'onReady': onPlayerReady
