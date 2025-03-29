@@ -4,20 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rassemblement Alsacien</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">Rassemblement Alsacien</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="communaute.html">Communauté</a></li>
+                <li><a href="multimedia.html">Multimédia</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="hero">
         <video autoplay muted loop class="hero-video">
-            <source src="alsace_video.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la vidéo.
+            <source src="video.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
-            <h1 class="slogan">Alsace libre, jeunesse fière !</h1>
-            <button class="cta">Rejoins le mouvement</button>
+            <h1>Pour une Alsace Libre et Forte</h1>
+            <p>Rejoins le mouvement de la jeunesse alsacienne !</p>
+            <a href="communaute.html" class="cta">S'engager maintenant</a>
         </div>
     </section>
-    <script src="scripts.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
