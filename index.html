@@ -3,35 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rassemblement Alsacien</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Parti RA - Conservateur & Indépendantiste</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Rassemblement Alsacien</div>
-            <div class="menu-toggle">☰</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="programme.html">Programme</a></li>
-                <li><a href="actualites.html">Actualités</a></li>
-                <li><a href="communaute.html">Communauté</a></li>
-                <li><a href="multimedia.html">Multimédia</a></li>
-                <li><a href="boutique.html">Boutique</a></li>
-                <li><a href="connexion.html">Connexion</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Barre de navigation -->
+    <nav>
+        <div class="logo">Parti RA</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#programme">Programme</a></li>
+            <li><a href="#news">Actualités</a></li>
+            <li><a href="#join">Nous rejoindre</a></li>
+            <li><a href="#donate">Faire un don</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="animate-title">Pour une Alsace Libre et Forte</h1>
-            <p class="animate-subtitle">Rejoins le mouvement de la jeunesse alsacienne !</p>
-            <a href="communaute.html" class="cta pulse">S'engager maintenant</a>
+    <!-- Page d'accueil -->
+    <section id="home">
+        <h1>Pour nos valeurs, pour notre souveraineté</h1>
+        <p>Bienvenue au Parti RA. Voici le message du chef : "Nous luttons pour préserver notre identité et notre indépendance."</p>
+        <video controls>
+            <source src="video-presentation.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="quick-links">
+            <a href="#programme">Programme</a>
+            <a href="#join">Rejoindre RA</a>
+            <a href="#news">Actualités</a>
         </div>
     </section>
+
+    <!-- À propos -->
+    <section id="about">
+        <h2>À propos</h2>
+        <p>Histoire : Fondé en 2020, le Parti RA défend les valeurs conservatrices et indépendantistes.</p>
+        <h3>Valeurs fondamentales</h3>
+        <ul>
+            <li>Conservatisme : Tradition, famille, ordre, souveraineté</li>
+            <li>Indépendantisme : Autonomie politique, défense de la nation</li>
+        </ul>
+        <h3>Équipe dirigeante</h3>
+        <div class="team">
+            <div class="member">
+                <img src="chef.jpg" alt="Chef du parti">
+                <p>Jean Dupont - Chef du parti</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programme -->
+    <section id="programme">
+        <h2>Programme politique</h2>
+        <p>Vision : Un avenir prospère et souverain.</p>
+        <h3>Économie et fiscalité</h3>
+        <p>Réduire les impôts, soutenir les PME.</p>
+        <a href="manifeste.pdf" download>Télécharger le manifeste</a>
+    </section>
+
+    <!-- Actualités -->
+    <section id="news">
+        <h2>Actualités</h2>
+        <article>
+            <h3>Communiqué du 07/04/2025</h3>
+            <p>Le Parti RA s’oppose à la nouvelle loi sur l’immigration.</p>
+        </article>
+    </section>
+
+    <!-- Nous rejoindre -->
+    <section id="join">
+        <h2>Nous rejoindre</h2>
+        <p>Devenez membre ou bénévole !</p>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">S’inscrire à la newsletter</button>
+        </form>
+    </section>
+
+    <!-- Faire un don -->
+    <section id="donate">
+        <h2>Faire un don</h2>
+        <form>
+            <input type="number" placeholder="Montant (€)" required>
+            <button type="submit">Donner</button>
+        </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Nom" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p>Email : contact@parti-ra.fr | Tél : 01 23 45 67 89</p>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p><a href="#legal">Mentions légales / RGPD</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
