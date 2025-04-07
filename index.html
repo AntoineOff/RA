@@ -11,111 +11,124 @@
     <nav class="navbar">
         <div class="logo">Parti Jeunesse</div>
         <ul class="nav-links">
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#program">Programme</a></li>
-            <li><a href="#news">Actualités</a></li>
-            <li><a href="#engage">Engagement</a></li>
-            <li><a href="#media">Médias</a></li>
-            <li><a href="#testimonials">Témoignages</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="tab-link" data-tab="home">Accueil</a></li>
+            <li><a href="#about" class="tab-link" data-tab="about">À propos</a></li>
+            <li><a href="#program" class="tab-link" data-tab="program">Programme</a></li>
+            <li><a href="#news" class="tab-link" data-tab="news">Actualités</a></li>
+            <li><a href="#engage" class="tab-link" data-tab="engage">Engagement</a></li>
+            <li><a href="#media" class="tab-link" data-tab="media">Médias</a></li>
+            <li><a href="#testimonials" class="tab-link" data-tab="testimonials">Témoignages</a></li>
+            <li><a href="#contact" class="tab-link" data-tab="contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Bannière principale -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Bienvenue au Parti Jeunesse</h1>
-            <p>Construisons l'avenir ensemble !</p>
-            <button class="cta-btn">Rejoignez-nous</button>
-            <button class="cta-btn secondary">Découvrez notre programme</button>
-        </div>
-    </section>
-
-    <!-- Actualités en vedette -->
-    <section class="featured-news">
-        <h2>Actualités en vedette</h2>
-        <div class="news-grid">
-            <div class="news-item">Événement : Conférence Jeunesse 2025</div>
-            <div class="news-item">Nouvelle initiative pour l'éducation</div>
-            <div class="news-item">Réaction à la réforme climatique</div>
-        </div>
-    </section>
-
-    <!-- À propos de nous -->
-    <section id="about" class="section">
-        <h2>À propos de nous</h2>
-        <p>Nous sommes un parti dédié à l'avenir, fondé en 2015 avec pour mission d'écouter et d'agir pour la jeunesse.</p>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Membre">
-                <h3>Marie Dupont</h3>
-                <p>Présidente - Passionnée par l'égalité des chances.</p>
+    <!-- Contenu par onglets -->
+    <div class="tab-content">
+        <!-- Accueil avec carrousel -->
+        <section id="home" class="tab-pane active">
+            <div class="carousel">
+                <div class="carousel-slide active" style="background-image: url('https://via.placeholder.com/1920x1080/1c2526/ffffff?text=Slide+1');">
+                    <div class="hero-content">
+                        <h1>Bienvenue au Parti Jeunesse</h1>
+                        <p>Construisons l'avenir ensemble !</p>
+                        <button class="cta-btn">Rejoignez-nous</button>
+                        <button class="cta-btn secondary">Découvrez notre programme</button>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('https://via.placeholder.com/1920x1080/2e2e2e/ffffff?text=Slide+2');">
+                    <div class="hero-content">
+                        <h1>Pour une jeunesse entendue</h1>
+                        <p>Nos idées, votre futur.</p>
+                        <button class="cta-btn">Agissez maintenant</button>
+                    </div>
+                </div>
+                <button class="carousel-prev">❮</button>
+                <button class="carousel-next">❯</button>
             </div>
-            <!-- Ajouter d'autres membres -->
-        </div>
-    </section>
+            <div class="featured-news">
+                <h2>Actualités en vedette</h2>
+                <div class="news-grid">
+                    <div class="news-item">Événement : Conférence Jeunesse 2025</div>
+                    <div class="news-item">Nouvelle initiative pour l'éducation</div>
+                    <div class="news-item">Réaction à la réforme climatique</div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Programme -->
-    <section id="program" class="section">
-        <h2>Programme et idées</h2>
-        <div class="program-grid">
-            <div class="program-item">Éducation : Gratuité pour tous</div>
-            <div class="program-item">Environnement : Neutralité carbone 2035</div>
-            <div class="program-item">Jeunesse : Emplois garantis</div>
-        </div>
-    </section>
+        <!-- À propos -->
+        <section id="about" class="tab-pane">
+            <h2>À propos de nous</h2>
+            <p>Nous sommes un parti dédié à l'avenir, fondé en 2015 avec pour mission d'écouter et d'agir pour la jeunesse.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Membre">
+                    <h3>Marie Dupont</h3>
+                    <p>Présidente - Passionnée par l'égalité des chances.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Actualités et événements -->
-    <section id="news" class="section">
-        <h2>Actualités et événements</h2>
-        <div class="blog-post">Dernier article : Pourquoi voter pour nous ?</div>
-        <div class="event-calendar">
-            <p>Prochain événement : 15 avril 2025 - Rassemblement</p>
-            <button>S'inscrire</button>
-        </div>
-    </section>
+        <!-- Programme -->
+        <section id="program" class="tab-pane">
+            <h2>Programme et idées</h2>
+            <div class="program-grid">
+                <div class="program-item">Éducation : Gratuité pour tous</div>
+                <div class="program-item">Environnement : Neutralité carbone 2035</div>
+                <div class="program-item">Jeunesse : Emplois garantis</div>
+            </div>
+        </section>
 
-    <!-- Engagement -->
-    <section id="engage" class="section">
-        <h2>Engagez-vous</h2>
-        <form class="join-form">
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <button type="submit">Adhérer</button>
-        </form>
-        <a href="#" class="volunteer-link">Devenir bénévole</a>
-        <button class="donate-btn">Faire un don</button>
-    </section>
+        <!-- Actualités -->
+        <section id="news" class="tab-pane">
+            <h2>Actualités et événements</h2>
+            <div class="blog-post">Dernier article : Pourquoi voter pour nous ?</div>
+            <div class="event-calendar">
+                <p>Prochain événement : 15 avril 2025 - Rassemblement</p>
+                <button>S'inscrire</button>
+            </div>
+        </section>
 
-    <!-- Ressources multimédias -->
-    <section id="media" class="section">
-        <h2>Ressources multimédias</h2>
-        <div class="media-gallery">
-            <img src="https://via.placeholder.com/300x200" alt="Événement">
-            <video controls><source src="video.mp4" type="video/mp4"></video>
-        </div>
-    </section>
+        <!-- Engagement -->
+        <section id="engage" class="tab-pane">
+            <h2>Engagez-vous</h2>
+            <form class="join-form">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <button type="submit">Adhérer</button>
+            </form>
+            <a href="#" class="volunteer-link">Devenir bénévole</a>
+            <button class="donate-btn">Faire un don</button>
+        </section>
 
-    <!-- Témoignages -->
-    <section id="testimonials" class="section">
-        <h2>Témoignages</h2>
-        <div class="testimonial">“J’ai rejoint le parti pour faire entendre ma voix.” - Lucas, 22 ans</div>
-    </section>
+        <!-- Médias -->
+        <section id="media" class="tab-pane">
+            <h2>Ressources multimédias</h2>
+            <div class="media-gallery">
+                <img src="https://via.placeholder.com/300x200" alt="Événement">
+                <video controls><source src="video.mp4" type="video/mp4"></video>
+            </div>
+        </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-        <h2>Contactez-nous</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-        <div class="social-links">
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-        </div>
-    </section>
+        <!-- Témoignages -->
+        <section id="testimonials" class="tab-pane">
+            <h2>Témoignages</h2>
+            <div class="testimonial">“J’ai rejoint le parti pour faire entendre ma voix.” - Lucas, 22 ans</div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="tab-pane">
+            <h2>Contactez-nous</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+            <div class="social-links">
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
