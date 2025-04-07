@@ -3,129 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parti RA - Conservateur & Indépendantiste</title>
+    <title>Parti Jeunesse</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barre de navigation -->
-    <nav class="fade-in">
-        <div class="logo">Parti RA</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Parti Jeunesse</div>
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
             <li><a href="#about">À propos</a></li>
-            <li><a href="#programme">Programme</a></li>
+            <li><a href="#program">Programme</a></li>
             <li><a href="#news">Actualités</a></li>
-            <li><a href="#join">Nous rejoindre</a></li>
-            <li><a href="#donate">Faire un don</a></li>
+            <li><a href="#engage">Engagement</a></li>
+            <li><a href="#media">Médias</a></li>
+            <li><a href="#testimonials">Témoignages</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Page d'accueil -->
-    <section id="home" class="fade-in">
-        <h1>Pour nos valeurs, pour notre souveraineté</h1>
-        <p class="intro-text">Bienvenue au Parti RA. Voici le message du chef : "Nous luttons pour préserver notre identité et notre indépendance."</p>
-        <video controls class="video-hero">
-            <source src="video-presentation.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la vidéo.
-        </video>
-        <div class="quick-links">
-            <a href="#programme" class="btn">Programme</a>
-            <a href="#join" class="btn">Rejoindre RA</a>
-            <a href="#news" class="btn">Actualités</a>
+    <!-- Bannière principale -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue au Parti Jeunesse</h1>
+            <p>Construisons l'avenir ensemble !</p>
+            <button class="cta-btn">Rejoignez-nous</button>
+            <button class="cta-btn secondary">Découvrez notre programme</button>
         </div>
     </section>
 
-    <!-- À propos -->
-    <section id="about" class="fade-in">
-        <h2>À propos</h2>
-        <p>Histoire : Fondé en 2020, le Parti RA défend les valeurs conservatrices et indépendantistes.</p>
-        <h3>Valeurs fondamentales</h3>
-        <ul class="values">
-            <li>Conservatisme : Tradition, famille, ordre, souveraineté</li>
-            <li>Indépendantisme : Autonomie politique, défense de la nation</li>
-        </ul>
-        <h3>Équipe dirigeante</h3>
-        <div class="team">
-            <div class="member slide-in">
-                <img src="chef.jpg" alt="Chef du parti">
-                <p>Jean Dupont - Chef du parti</p>
-            </div>
+    <!-- Actualités en vedette -->
+    <section class="featured-news">
+        <h2>Actualités en vedette</h2>
+        <div class="news-grid">
+            <div class="news-item">Événement : Conférence Jeunesse 2025</div>
+            <div class="news-item">Nouvelle initiative pour l'éducation</div>
+            <div class="news-item">Réaction à la réforme climatique</div>
         </div>
     </section>
 
-    <!-- Programme avec onglets -->
-    <section id="programme" class="fade-in">
-        <h2>Programme politique</h2>
-        <p>Vision : Un avenir prospère et souverain.</p>
-        <div class="tabs">
-            <div class="tab-buttons">
-                <button class="tab-btn active" data-tab="economie">Économie</button>
-                <button class="tab-btn" data-tab="culture">Culture</button>
-                <button class="tab-btn" data-tab="education">Éducation</button>
+    <!-- À propos de nous -->
+    <section id="about" class="section">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes un parti dédié à l'avenir, fondé en 2015 avec pour mission d'écouter et d'agir pour la jeunesse.</p>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/150" alt="Membre">
+                <h3>Marie Dupont</h3>
+                <p>Présidente - Passionnée par l'égalité des chances.</p>
             </div>
-            <div class="tab-content">
-                <div id="economie" class="tab-pane active">
-                    <h3>Économie et fiscalité</h3>
-                    <p>Réduire les impôts, soutenir les PME.</p>
-                </div>
-                <div id="culture" class="tab-pane">
-                    <h3>Culture et identité</h3>
-                    <p>Préserver notre patrimoine culturel.</p>
-                </div>
-                <div id="education" class="tab-pane">
-                    <h3>Éducation</h3>
-                    <p>Promouvoir une éducation ancrée dans nos valeurs.</p>
-                </div>
-            </div>
+            <!-- Ajouter d'autres membres -->
         </div>
-        <a href="manifeste.pdf" download class="btn">Télécharger le manifeste</a>
     </section>
 
-    <!-- Actualités -->
-    <section id="news" class="fade-in">
-        <h2>Actualités</h2>
-        <article class="slide-in">
-            <h3>Communiqué du 07/04/2025</h3>
-            <p>Le Parti RA s’oppose à la nouvelle loi sur l’immigration.</p>
-        </article>
+    <!-- Programme -->
+    <section id="program" class="section">
+        <h2>Programme et idées</h2>
+        <div class="program-grid">
+            <div class="program-item">Éducation : Gratuité pour tous</div>
+            <div class="program-item">Environnement : Neutralité carbone 2035</div>
+            <div class="program-item">Jeunesse : Emplois garantis</div>
+        </div>
     </section>
 
-    <!-- Nous rejoindre -->
-    <section id="join" class="fade-in">
-        <h2>Nous rejoindre</h2>
-        <p>Devenez membre ou bénévole !</p>
-        <form class="form-anim">
+    <!-- Actualités et événements -->
+    <section id="news" class="section">
+        <h2>Actualités et événements</h2>
+        <div class="blog-post">Dernier article : Pourquoi voter pour nous ?</div>
+        <div class="event-calendar">
+            <p>Prochain événement : 15 avril 2025 - Rassemblement</p>
+            <button>S'inscrire</button>
+        </div>
+    </section>
+
+    <!-- Engagement -->
+    <section id="engage" class="section">
+        <h2>Engagez-vous</h2>
+        <form class="join-form">
+            <input type="text" placeholder="Nom" required>
             <input type="email" placeholder="Email" required>
-            <button type="submit" class="btn">S’inscrire à la newsletter</button>
+            <button type="submit">Adhérer</button>
         </form>
+        <a href="#" class="volunteer-link">Devenir bénévole</a>
+        <button class="donate-btn">Faire un don</button>
     </section>
 
-    <!-- Faire un don -->
-    <section id="donate" class="fade-in">
-        <h2>Faire un don</h2>
-        <form class="form-anim">
-            <input type="number" placeholder="Montant (€)" required>
-            <button type="submit" class="btn">Donner</button>
-        </form>
+    <!-- Ressources multimédias -->
+    <section id="media" class="section">
+        <h2>Ressources multimédias</h2>
+        <div class="media-gallery">
+            <img src="https://via.placeholder.com/300x200" alt="Événement">
+            <video controls><source src="video.mp4" type="video/mp4"></video>
+        </div>
+    </section>
+
+    <!-- Témoignages -->
+    <section id="testimonials" class="section">
+        <h2>Témoignages</h2>
+        <div class="testimonial">“J’ai rejoint le parti pour faire entendre ma voix.” - Lucas, 22 ans</div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <form class="form-anim">
+    <section id="contact" class="section">
+        <h2>Contactez-nous</h2>
+        <form class="contact-form">
             <input type="text" placeholder="Nom" required>
             <input type="email" placeholder="Email" required>
             <textarea placeholder="Message" required></textarea>
-            <button type="submit" class="btn">Envoyer</button>
+            <button type="submit">Envoyer</button>
         </form>
-        <p>Email : contact@parti-ra.fr | Tél : 01 23 45 67 89</p>
+        <div class="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
     </section>
-
-    <!-- Pied de page -->
-    <footer class="fade-in">
-        <p><a href="#legal">Mentions légales / RGPD</a></p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
