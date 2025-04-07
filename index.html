@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Barre de navigation -->
-    <nav>
+    <nav class="fade-in">
         <div class="logo">Parti RA</div>
         <ul class="nav-links">
             <li><a href="#home">Accueil</a></li>
@@ -22,89 +22,108 @@
     </nav>
 
     <!-- Page d'accueil -->
-    <section id="home">
+    <section id="home" class="fade-in">
         <h1>Pour nos valeurs, pour notre souveraineté</h1>
-        <p>Bienvenue au Parti RA. Voici le message du chef : "Nous luttons pour préserver notre identité et notre indépendance."</p>
-        <video controls>
+        <p class="intro-text">Bienvenue au Parti RA. Voici le message du chef : "Nous luttons pour préserver notre identité et notre indépendance."</p>
+        <video controls class="video-hero">
             <source src="video-presentation.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la vidéo.
         </video>
         <div class="quick-links">
-            <a href="#programme">Programme</a>
-            <a href="#join">Rejoindre RA</a>
-            <a href="#news">Actualités</a>
+            <a href="#programme" class="btn">Programme</a>
+            <a href="#join" class="btn">Rejoindre RA</a>
+            <a href="#news" class="btn">Actualités</a>
         </div>
     </section>
 
     <!-- À propos -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>À propos</h2>
         <p>Histoire : Fondé en 2020, le Parti RA défend les valeurs conservatrices et indépendantistes.</p>
         <h3>Valeurs fondamentales</h3>
-        <ul>
+        <ul class="values">
             <li>Conservatisme : Tradition, famille, ordre, souveraineté</li>
             <li>Indépendantisme : Autonomie politique, défense de la nation</li>
         </ul>
         <h3>Équipe dirigeante</h3>
         <div class="team">
-            <div class="member">
+            <div class="member slide-in">
                 <img src="chef.jpg" alt="Chef du parti">
                 <p>Jean Dupont - Chef du parti</p>
             </div>
         </div>
     </section>
 
-    <!-- Programme -->
-    <section id="programme">
+    <!-- Programme avec onglets -->
+    <section id="programme" class="fade-in">
         <h2>Programme politique</h2>
         <p>Vision : Un avenir prospère et souverain.</p>
-        <h3>Économie et fiscalité</h3>
-        <p>Réduire les impôts, soutenir les PME.</p>
-        <a href="manifeste.pdf" download>Télécharger le manifeste</a>
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="economie">Économie</button>
+                <button class="tab-btn" data-tab="culture">Culture</button>
+                <button class="tab-btn" data-tab="education">Éducation</button>
+            </div>
+            <div class="tab-content">
+                <div id="economie" class="tab-pane active">
+                    <h3>Économie et fiscalité</h3>
+                    <p>Réduire les impôts, soutenir les PME.</p>
+                </div>
+                <div id="culture" class="tab-pane">
+                    <h3>Culture et identité</h3>
+                    <p>Préserver notre patrimoine culturel.</p>
+                </div>
+                <div id="education" class="tab-pane">
+                    <h3>Éducation</h3>
+                    <p>Promouvoir une éducation ancrée dans nos valeurs.</p>
+                </div>
+            </div>
+        </div>
+        <a href="manifeste.pdf" download class="btn">Télécharger le manifeste</a>
     </section>
 
     <!-- Actualités -->
-    <section id="news">
+    <section id="news" class="fade-in">
         <h2>Actualités</h2>
-        <article>
+        <article class="slide-in">
             <h3>Communiqué du 07/04/2025</h3>
             <p>Le Parti RA s’oppose à la nouvelle loi sur l’immigration.</p>
         </article>
     </section>
 
     <!-- Nous rejoindre -->
-    <section id="join">
+    <section id="join" class="fade-in">
         <h2>Nous rejoindre</h2>
         <p>Devenez membre ou bénévole !</p>
-        <form>
+        <form class="form-anim">
             <input type="email" placeholder="Email" required>
-            <button type="submit">S’inscrire à la newsletter</button>
+            <button type="submit" class="btn">S’inscrire à la newsletter</button>
         </form>
     </section>
 
     <!-- Faire un don -->
-    <section id="donate">
+    <section id="donate" class="fade-in">
         <h2>Faire un don</h2>
-        <form>
+        <form class="form-anim">
             <input type="number" placeholder="Montant (€)" required>
-            <button type="submit">Donner</button>
+            <button type="submit" class="btn">Donner</button>
         </form>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contact</h2>
-        <form>
+        <form class="form-anim">
             <input type="text" placeholder="Nom" required>
             <input type="email" placeholder="Email" required>
             <textarea placeholder="Message" required></textarea>
-            <button type="submit">Envoyer</button>
+            <button type="submit" class="btn">Envoyer</button>
         </form>
         <p>Email : contact@parti-ra.fr | Tél : 01 23 45 67 89</p>
     </section>
 
     <!-- Pied de page -->
-    <footer>
+    <footer class="fade-in">
         <p><a href="#legal">Mentions légales / RGPD</a></p>
     </footer>
 
