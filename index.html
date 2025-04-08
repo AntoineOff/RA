@@ -3,133 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parti Jeunesse</title>
+    <title>NouvelHorizon - Parti Politique</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">Parti Jeunesse</div>
-        <ul class="nav-links">
-            <li><a href="#home" class="tab-link" data-tab="home">Accueil</a></li>
-            <li><a href="#about" class="tab-link" data-tab="about">À propos</a></li>
-            <li><a href="#program" class="tab-link" data-tab="program">Programme</a></li>
-            <li><a href="#news" class="tab-link" data-tab="news">Actualités</a></li>
-            <li><a href="#engage" class="tab-link" data-tab="engage">Engagement</a></li>
-            <li><a href="#media" class="tab-link" data-tab="media">Médias</a></li>
-            <li><a href="#testimonials" class="tab-link" data-tab="testimonials">Témoignages</a></li>
-            <li><a href="#contact" class="tab-link" data-tab="contact">Contact</a></li>
-        </ul>
+    <nav id="main-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><span class="logo-text">Nouvel<span class="accent">Horizon</span></span></a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="engagement.html">Engagement</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="engagement.html#adhesion" class="btn-primary">Rejoindre</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Contenu par onglets -->
-    <div class="tab-content">
-        <!-- Accueil avec carrousel -->
-        <section id="home" class="tab-pane active">
-            <div class="carousel">
-                <div class="carousel-slide active" style="background-image: url('https://via.placeholder.com/1920x1080/1c2526/ffffff?text=Slide+1');">
-                    <div class="hero-content">
-                        <h1>Bienvenue au Parti Jeunesse</h1>
-                        <p>Construisons l'avenir ensemble !</p>
-                        <button class="cta-btn">Rejoignez-nous</button>
-                        <button class="cta-btn secondary">Découvrez notre programme</button>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="animated-heading">Construisons<br>l'avenir<br>ensemble</h1>
+                <p class="hero-subtitle">Un mouvement politique nouvelle génération</p>
+                <div class="cta-buttons">
+                    <a href="programme.html" class="btn-primary">Découvrir notre programme</a>
+                    <a href="engagement.html" class="btn-secondary">S'engager</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="wave-container">
+            <svg class="wave" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,128L48,138.7C96,149,192,171,288,176C384,181,480,171,576,144C672,117,768,75,864,80C960,85,1056,139,1152,165.3C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section class="key-points">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos <span class="accent">Priorités</span></h2>
+                <p>Découvrez les axes majeurs de notre vision politique</p>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Éducation</h3>
+                    <p>Des mesures concrètes pour améliorer le système éducatif et préparer les jeunes aux défis de demain.</p>
+                    <a href="programme.html#education" class="learn-more">En savoir plus →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Innovation écologique</h3>
+                    <p>Un développement responsable alliant progrès économique et protection de notre environnement.</p>
+                    <a href="programme.html#ecologie" class="learn-more">En savoir plus →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Emploi</h3>
+                    <p>Favoriser l'entrepreneuriat et créer les conditions d'un marché du travail dynamique et inclusif.</p>
+                    <a href="programme.html#emploi" class="learn-more">En savoir plus →</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Sécurité</h3>
+                    <p>Des initiatives fortes pour assurer la protection des citoyens et renforcer notre souveraineté.</p>
+                    <a href="programme.html#securite" class="learn-more">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Actualités <span class="accent">Récentes</span></h2>
+                <p>Restez informé des dernières initiatives et événements</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-item featured">
+                    <div class="news-image">
+                        <img src="/api/placeholder/800/500" alt="Conférence nationale">
+                        <div class="news-badge">À la une</div>
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">8 avril 2025</span>
+                        <h3>Conférence nationale : Les défis de l'économie française</h3>
+                        <p>Notre parti organise une grande conférence réunissant experts et acteurs économiques pour définir les priorités post-crise.</p>
+                        <a href="actualites.html#conference-nationale" class="read-more">Lire l'article →</a>
                     </div>
                 </div>
-                <div class="carousel-slide" style="background-image: url('https://via.placeholder.com/1920x1080/2e2e2e/ffffff?text=Slide+2');">
-                    <div class="hero-content">
-                        <h1>Pour une jeunesse entendue</h1>
-                        <p>Nos idées, votre futur.</p>
-                        <button class="cta-btn">Agissez maintenant</button>
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="/api/placeholder/400/300" alt="Campus d'été">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">2 avril 2025</span>
+                        <h3>Inscriptions ouvertes pour le campus d'été</h3>
+                        <a href="actualites.html#campus-ete" class="read-more">Lire l'article →</a>
                     </div>
                 </div>
-                <button class="carousel-prev">❮</button>
-                <button class="carousel-next">❯</button>
-            </div>
-            <div class="featured-news">
-                <h2>Actualités en vedette</h2>
-                <div class="news-grid">
-                    <div class="news-item">Événement : Conférence Jeunesse 2025</div>
-                    <div class="news-item">Nouvelle initiative pour l'éducation</div>
-                    <div class="news-item">Réaction à la réforme climatique</div>
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="/api/placeholder/400/300" alt="Réforme éducation">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">28 mars 2025</span>
+                        <h3>Notre proposition pour la réforme de l'éducation</h3>
+                        <a href="actualites.html#reforme-education" class="read-more">Lire l'article →</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="/api/placeholder/400/300" alt="Rencontre jeunes">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date">20 mars 2025</span>
+                        <h3>Rencontre avec les jeunes entrepreneurs</h3>
+                        <a href="actualites.html#jeunes-entrepreneurs" class="read-more">Lire l'article →</a>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="section-footer">
+                <a href="actualites.html" class="btn-secondary">Voir toutes les actualités</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- À propos -->
-        <section id="about" class="tab-pane">
-            <h2>À propos de nous</h2>
-            <p>Nous sommes un parti dédié à l'avenir, fondé en 2015 avec pour mission d'écouter et d'agir pour la jeunesse.</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://via.placeholder.com/150" alt="Membre">
-                    <h3>Marie Dupont</h3>
-                    <p>Présidente - Passionnée par l'égalité des chances.</p>
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ils nous <span class="accent">Soutiennent</span></h2>
+                <p>Découvrez les témoignages de nos membres et sympathisants</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"J'ai rejoint NouvelHorizon car c'est le seul parti qui propose une vision réellement tournée vers l'avenir tout en préservant nos valeurs essentielles. Les idées innovantes et l'atmosphère dynamique m'ont convaincu."</p>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/100/100" alt="Thomas D.">
+                                <div>
+                                    <h4>Thomas D.</h4>
+                                    <span>Entrepreneur, 29 ans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Après des années de désintérêt pour la politique, j'ai enfin trouvé un mouvement qui parle aux jeunes sans condescendance et qui comprend nos préoccupations. Le programme sur l'emploi et l'éducation répond parfaitement à mes attentes."</p>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/100/100" alt="Sophie M.">
+                                <div>
+                                    <h4>Sophie M.</h4>
+                                    <span>Étudiante, 23 ans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Ce parti a su réconcilier tradition et modernité. J'apprécie particulièrement l'approche pragmatique sur les questions économiques et la volonté de préserver notre souveraineté tout en restant ouvert sur le monde."</p>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/100/100" alt="Marc L.">
+                                <div>
+                                    <h4>Marc L.</h4>
+                                    <span>Ingénieur, 34 ans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Programme -->
-        <section id="program" class="tab-pane">
-            <h2>Programme et idées</h2>
-            <div class="program-grid">
-                <div class="program-item">Éducation : Gratuité pour tous</div>
-                <div class="program-item">Environnement : Neutralité carbone 2035</div>
-                <div class="program-item">Jeunesse : Emplois garantis</div>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à faire entendre votre voix ?</h2>
+                <p>Rejoignez NouvelHorizon et participez activement à la construction d'une France plus forte, plus juste et plus innovante.</p>
+                <div class="cta-buttons">
+                    <a href="engagement.html#adhesion" class="btn-primary">Devenir membre</a>
+                    <a href="contact.html" class="btn-secondary">Nous contacter</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Actualités -->
-        <section id="news" class="tab-pane">
-            <h2>Actualités et événements</h2>
-            <div class="blog-post">Dernier article : Pourquoi voter pour nous ?</div>
-            <div class="event-calendar">
-                <p>Prochain événement : 15 avril 2025 - Rassemblement</p>
-                <button>S'inscrire</button>
+    <section class="events-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Événements à <span class="accent">Venir</span></h2>
+                <p>Participez à nos prochains rendez-vous</p>
             </div>
-        </section>
-
-        <!-- Engagement -->
-        <section id="engage" class="tab-pane">
-            <h2>Engagez-vous</h2>
-            <form class="join-form">
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <button type="submit">Adhérer</button>
-            </form>
-            <a href="#" class="volunteer-link">Devenir bénévole</a>
-            <button class="donate-btn">Faire un don</button>
-        </section>
-
-        <!-- Médias -->
-        <section id="media" class="tab-pane">
-            <h2>Ressources multimédias</h2>
-            <div class="media-gallery">
-                <img src="https://via.placeholder.com/300x200" alt="Événement">
-                <video controls><source src="video.mp4" type="video/mp4"></video>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Avr</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Débat : Réinventer notre modèle social</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 18h30</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Paris, Maison de la Mutualité</span>
+                        </div>
+                        <a href="actualites.html#evenement-debat" class="btn-tertiary">S'inscrire</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Avr</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Café politique : Jeunesse et engagement</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 19h00</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Lyon, Café des Arcades</span>
+                        </div>
+                        <a href="actualites.html#evenement-cafe" class="btn-tertiary">S'inscrire</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">05</span>
+                        <span class="month">Mai</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Webinaire : Innovation et économie numérique</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 20h00</span>
+                            <span><i class="fas fa-globe"></i> En ligne</span>
+                        </div>
+                        <a href="actualites.html#evenement-webinaire" class="btn-tertiary">S'inscrire</a>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <!-- Témoignages -->
-        <section id="testimonials" class="tab-pane">
-            <h2>Témoignages</h2>
-            <div class="testimonial">“J’ai rejoint le parti pour faire entendre ma voix.” - Lucas, 22 ans</div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="tab-pane">
-            <h2>Contactez-nous</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-            <div class="social-links">
-                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            <div class="section-footer">
+                <a href="actualites.html#calendrier" class="btn-secondary">Voir tous les événements</a>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Restez <span class="accent">Informé</span></h2>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir nos actualités et invitations aux événements</p>
+                </div>
+                <form id="newsletter-form" class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Votre adresse email" required>
+                        <button type="submit" class="btn-primary">S'inscrire</button>
+                    </div>
+                    <div class="form-consent">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">J'accepte de recevoir des communications de NouvelHorizon</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Nouvel<span class="accent">Horizon</span></span>
+                    </div>
+                    <p>Un mouvement politique nouvelle génération pour une France forte et innovante.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="programme.html">Programme</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="engagement.html">Engagement</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="ressources.html#documents">Documents</a></li>
+                        <li><a href="ressources.html#videos">Vidéos</a></li>
+                        <li><a href="ressources.html#podcasts">Podcasts</a></li>
+                        <li><a href="ressources.html#faq">FAQ</a></li>
+                        <li><a href="ressources.html#presse">Espace presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 15 rue de la République, 75001 Paris</p>
+                        <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@nouvelhorizon.fr</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NouvelHorizon. Tous droits réservés.</p>
+                <ul class="legal-links">
+                    <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                    <li><a href="conditions-utilisation.html">Conditions d'utilisation</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
